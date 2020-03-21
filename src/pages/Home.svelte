@@ -1,17 +1,24 @@
 <script>
   import TextForm from "../layout/TextForm.svelte";
-  import SubmitButton from "../layout/SubmitButton.svelte";
+  import GetForm from "../layout/GetForm.svelte";
+  import LoginButton from "../layout/LoginButton.svelte";
+  import TranslateButton from "../layout/TranslateButton.svelte";
 </script>
 
-<h4>Send Text between your Phone and Desktop</h4>
-
-<div class="container">
+<div class="container right-align" style="margin-top: 30px;">
+  <LoginButton />
+  <TranslateButton />
+</div>
+<div class="container" style="margin-top: 150px;">
   <div class="row">
-    <div class="col s8">
+    <div class="center-align">
       <TextForm />
     </div>
-    <div class="s4">
-      <SubmitButton />
+  </div>
+  <div class="row">
+    <div class="center-align">
+      <GetForm />
     </div>
   </div>
+
 </div>

@@ -9,8 +9,7 @@
 
 <Router>
   <Navbar />
-  <div class="container">
     <Route path="/" component={Home} />
-    <Route path="/about" component={About} />
-  </div>
+    <Route path="/About" component={About} />
 </Router>
+
