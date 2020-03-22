@@ -10,6 +10,6 @@
 <Router>
   <Navbar />
     <Route path="/" component={Home} />
-    <Route path="/About" component={About} />
+    <Route path="/about" component={About} />
 </Router>
 
