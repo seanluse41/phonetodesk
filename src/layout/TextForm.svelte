@@ -1,14 +1,34 @@
+<script>
+  import { db } from "../firebase.js";
+  export let newLink = "";
+  export let date = new Date();
+
+  const addLink = () => {
+    db.collection("links").add({ link: newLink, id: date.getTime() });
+
+    newLink = "";
+  };
+</script>
+
 <div class="row">
   <form class="col s12">
     <div class="row">
       <div class="input-field col s10">
-        <textarea id="textarea1" class="materialize-textarea" />
-        <label for="textarea1">Put your URL here.</label>
+        <form on:submit|preventDefault={addLink}>
+          <input
+            class="validate"
+            placeholder="Enter your link or text here"
+            type="text"
+            bind:value={newLink} />
+          <button
+            class="btn waves-effect waves-light col s2"
+            type="submit"
+            name="action">
+            Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
       </div>
-      <button class="btn waves-effect waves-light col s2">
-        Send
-        <i class="material-icons right">arrow_forward</i>
-      </button>
     </div>
   </form>
 </div>
