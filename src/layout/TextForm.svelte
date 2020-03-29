@@ -1,14 +1,27 @@
 <script>
   import { db } from "../firebase.js";
-  export let newLink = "";
-  export let date = new Date();
+  let newLink = "";
+  let linkSent = false;
+  export let idNum = 0;
 
   const addLink = () => {
-    db.collection("links").add({ link: newLink, id: date.getTime() });
+    idNum = Math.round(Math.random() * 99999);
+    db.collection("links")
+      .add({ link: newLink, id: idNum })
+      .then(function() {
+        console.log("Link sent!");
+        linkSent = true;
+      });
 
     newLink = "";
   };
 </script>
+
+<style>
+  p {
+    color: #ee6e73;
+  }
+</style>
 
 <div class="row">
   <form class="col s12">
@@ -31,4 +44,10 @@
       </div>
     </div>
   </form>
+</div>
+<div class="row">
+  {#if linkSent}
+    <h1>Your code is: {idNum}</h1>
+    <p>Remember your code to get your text back later.</p>
+  {/if}
 </div>
