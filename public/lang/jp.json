@@ -1,0 +1,17 @@
+{
+    "navigate-home": "ホーム",
+    "navigate-about": "サイトについて",
+    "text-form-hint": "テキストを入力してください",
+    "text-form-button": "送信",
+    "text-form-code-is": "あなたのコードは：",
+    "text-form-remember-code": "コードを忘れずに",
+    "get-form-hint": "５桁のコードを入力してください。",
+    "get-form-button": "受信",
+    "get-form-your-text": "あなたのテキストは:",
+    "get-form-here-you-go": "役に立ったかな？",
+    "about-title": "このサイトについて",
+    "about-framework": "Svelte、Materialize CSS、そしてFirestoreを使用したくて作成したサイトです。",
+    "about-why-made-site": "スマホで打つのが苦手な僕が楽にリンクなどをスマホからノートパソコンやデスクトップに送信できるようにも作った。",
+    "about-want-job": "フリーランス受付中です！",
+    "about-main-site-link": "詳しくは私個人のホームページに！"
+}

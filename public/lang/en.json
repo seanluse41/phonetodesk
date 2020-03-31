@@ -1,0 +1,17 @@
+{
+    "navigate-home": "Home",
+    "navigate-about": "About",
+    "text-form-hint": "Enter your link or text here",
+    "text-form-button": "SUBMIT",
+    "text-form-code-is": "Your code is",
+    "text-form-remember-code": "Remember your code to get your text back later.",
+    "get-form-hint": "Enter your 5 digit code here",
+    "get-form-button": "GET",
+    "get-form-your-text": "Your text is:",
+    "get-form-here-you-go": "Here you go, hope that helps.",
+    "about-title": "About",
+    "about-framework": "Made using Svelte, Materialize CSS, and Firebase.",
+    "about-why-made-site": "I got tired of sending emails etc to myself to transfer links to my laptop.",
+    "about-want-job": "Also give job please.",
+    "about-main-site-link": "Find my main site"
+}

@@ -1,4 +1,5 @@
 <script>
+  import { _ } from "../services/i18n";
   import { db } from "../firebase.js";
   let linkCode;
   let userLink = "";
@@ -32,7 +33,7 @@
         <form on:submit|preventDefault={getLink}>
           <input
             class="validate"
-            placeholder="Enter your 5 digit code here"
+            placeholder={$_('get-form-hint')}
             type="number"
             data-length="5"
             bind:value={linkCode} />
@@ -40,7 +41,7 @@
             class="btn waves-effect waves-light col s5"
             type="submit"
             name="action">
-            Get
+            {$_('get-form-button')}
             <i class="material-icons right">arrow_back</i>
           </button>
         </form>
@@ -54,8 +55,8 @@
     {#await userLink}
       <p>...querying...</p>
     {:then userLink}
-      <h1>Your text is: {userLink}</h1>
-      <p>Here you go, hope that helps.</p>
+      <h1>{$_('get-form-your-text')} {userLink}</h1>
+      <p>{$_('get-form-here-you-go')}</p>
     {:catch error}
       <p style="color: red">{error.message}</p>
     {/await}

@@ -1,5 +1,6 @@
 <script>
   import { Link } from "svelte-routing";
+  import { _ } from "../services/i18n";
 </script>
 
 <nav>
@@ -10,10 +11,10 @@
       </Link>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">{$_('navigate-home')}</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">{$_('navigate-about')}</Link>
         </li>
       </ul>
     </div>

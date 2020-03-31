@@ -1,5 +1,6 @@
 <script>
   import { db } from "../firebase.js";
+  import { _ } from "../services/i18n";
   let newLink = "";
   let linkSent = false;
   export let idNum = 0;
@@ -30,14 +31,14 @@
         <form on:submit|preventDefault={addLink}>
           <input
             class="validate"
-            placeholder="Enter your link or text here"
+            placeholder={$_('text-form-hint')}
             type="text"
             bind:value={newLink} />
           <button
             class="btn waves-effect waves-light col s2"
             type="submit"
             name="action">
-            Submit
+            {$_('text-form-button')}
             <i class="material-icons right">send</i>
           </button>
         </form>
@@ -47,7 +48,7 @@
 </div>
 <div class="row">
   {#if linkSent}
-    <h1>Your code is: {idNum}</h1>
-    <p>Remember your code to get your text back later.</p>
+    <h1>{$_('text-form-code-is')} {idNum}</h1>
+    <p>{$_('text-form-remember-code')}</p>
   {/if}
 </div>

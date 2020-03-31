@@ -1,14 +1,22 @@
+<script>
+  import { _ } from "../services/i18n";
+  import TranslateButton from "../layout/TranslateButton.svelte";
+  import { setupI18n, isLocaleLoaded, locale } from "../services/i18n";
+</script>
+
 <div class="container">
-  <h4>About</h4>
+  <div class="container right-align" style="margin-top: 30px;">
+    <TranslateButton
+      value={$locale}
+      on:locale-changed={e => setupI18n({ withLocale: e.detail })} />
+  </div>
+  <h4>{$_('about-title')}</h4>
 
-  <p>Made using Svelte, Materialize CSS, and Firebase.</p>
-  <p>
-    I got tired of sending emails etc to myself to transfer links to my laptop.
-  </p>
-  <p>Also give job please.</p>
+  <p>{$_('about-framework')}</p>
+  <p>{$_('about-why-made-site')}</p>
+  <p>{$_('about-want-job')}</p>
 
   <p>
-    Find my main site
-    <a href="www.seanbase.com">here.</a>
+    <a href="http://www.seanbase.com">{$_('about-main-site-link')}</a>
   </p>
 </div>

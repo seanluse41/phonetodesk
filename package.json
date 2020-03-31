@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-css-only": "^2.0.0",
@@ -22,6 +23,7 @@
     "rxfire": "^3.10.1",
     "rxjs": "^6.5.4",
     "sirv-cli": "^0.4.4",
+    "svelte-i18n": "^3.0.3",
     "svelte-routing": "^1.4.2"
   }
 }
