@@ -12,8 +12,11 @@ Svelteという最新リアクティブなフレームワークの試しで作�
 公開したURLはまだですので、実行したい方は：
 
 git clone https://github.com/seanluse41/phonetodesk.git
+
 cd phonetodesk
+
 npm instal
+
 npm run dev
 
 そしてlocalhost:5000へ確認をください。
