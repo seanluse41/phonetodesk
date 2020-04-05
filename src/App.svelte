@@ -10,6 +10,8 @@
   $: if (!$isLocaleLoaded) {
     setupI18n({ withLocale: "jp" });
   }
+
+  M.AutoInit();
 </script>
 
 {#if $isLocaleLoaded}
