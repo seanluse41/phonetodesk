@@ -1,6 +1,8 @@
 <script>
   import { db } from "../firebase.js";
   import { _ } from "../services/i18n";
+  import { fly } from "svelte/transition";
+
   let newLink = "";
   let linkSent = false;
   export let idNum = 0;
@@ -48,7 +50,11 @@
 </div>
 <div class="row">
   {#if linkSent}
-    <h1>{$_('text-form-code-is')} {idNum}</h1>
-    <p>{$_('text-form-remember-code')}</p>
+    <h1 transition:fly={{ y: 200, duration: 2000 }}>
+      {$_('text-form-code-is')} {idNum}
+    </h1>
+    <p transition:fly={{ y: 200, duration: 2000 }}>
+      {$_('text-form-remember-code')}
+    </p>
   {/if}
 </div>

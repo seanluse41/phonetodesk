@@ -1,6 +1,10 @@
 <script>
   import { _ } from "../services/i18n";
   import { db } from "../firebase.js";
+  import { fly } from "svelte/transition";
+  import regeneratorRuntime from "regenerator-runtime";
+  import "regenerator-runtime/runtime.js";
+
   let linkCode;
   let userLink = "";
   let gotLink = false;
@@ -55,10 +59,16 @@
     {#await userLink}
       <p>...querying...</p>
     {:then userLink}
-      <h1>{$_('get-form-your-text')} {userLink}</h1>
-      <p>{$_('get-form-here-you-go')}</p>
+      <h1 transition:fly="{{ y: 200, duration: 2000 }}">
+        {$_('get-form-your-text')} {userLink}
+      </h1>
+      <p transition:fly="{{ y: 200, duration: 2500 }}">
+        {$_('get-form-here-you-go')}
+      </p>
     {:catch error}
-      <p style="color: red">{error.message}</p>
+      <p transition:fly="{{ y: 200, duration: 2000 }}" style="color: red">
+        {error.message}
+      </p>
     {/await}
   {/if}
 </div>
