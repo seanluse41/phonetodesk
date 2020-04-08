@@ -11,7 +11,7 @@ I was tired of getting links on my phone, which I hate typing on, and wanted an 
 Svelteという最新リアクティブなフレームワークの試しで作成したサイトです。HTML5、Svelte、Materialize CSSで、データベースはFirestore.
 先日QRコードよりアンケートを記入することになり、スマホで打つのが苦手だなと思って、楽に携帯からノートパソコンやデスクトップに送信する方法はないかなという思いで作成しました。
 
-www.phonebase.com
+www.phonetodesk.com
 
 実行したい方は：
 
