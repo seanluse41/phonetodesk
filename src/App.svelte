@@ -4,6 +4,7 @@
   import { Router, Route } from "svelte-routing";
   import { setupI18n, isLocaleLoaded, locale } from "./services/i18n";
   import { derived } from "svelte/store";
+  import "es6-shim";
   import Home from "./pages/Home.svelte";
   import About from "./pages/About.svelte";
   import Navbar from "./layout/Navbar.svelte";

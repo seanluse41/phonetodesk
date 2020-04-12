@@ -50,7 +50,6 @@ export default {
 		babel({
 			extensions: ['.js', '.mjs', '.html', '.svelte'],
 			runtimeHelpers: true,
-			exclude: ['node_modules/@babel/**'],
 			presets: [
 				[
 					'@babel/preset-env',
